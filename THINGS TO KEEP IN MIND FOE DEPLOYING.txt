@@ -1,0 +1,14 @@
+THINGS TO KEEP IN MIND FOE DEPLOYING AND ADDING TO GITHUB REPO FOR OTHERS TO INSTALL
+
+- ffmpeg ffmpeg ffmpeg THE MAIN CAUSE OF ERRORS - SOLUTION IN DEVELOPMENT ENV:-
+		- install ffmpeg locally on your device and  copy the path in mycase it's ("C:\Users\user\Desktop\New folder\ffmpeg\bin\ffmpeg.exe")
+		- add these to your settings,py on project  --			
+													import os
+
+													FFMPEG_PATH = os.path.join(os.getcwd(), "ffmpeg.exe")
+													FFMPEG_PATH = os.getenv("FFMPEG_PATH", r"C:\Users\user\Desktop\New folder																							\ffmpeg\bin\ffmpeg.exe") - add your ffmpeg.exe path here
+
+		- and in your app views.py add the following -- 			os.environ["PATH"] += os.pathsep + os.path.dirname(settings.FFMPEG_PATH)
+               												 just before loading Whisper model 
+               												 model_name= 'tiny'
+               												 model = whisper.load_model(model_name)

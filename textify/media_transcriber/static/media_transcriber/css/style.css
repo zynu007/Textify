@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upload-container {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 20px 0;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.upload-container.dragover {
+    border-color: #4CAF50;
+    background-color: #f0f9f0;
+}
+
+.upload-content {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.file-info {
+    margin: 10px 0;
+    color: #666;
+}
+.file-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.file-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-button {
+    background-color: #ff4444;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.file-metadata {
+    margin: 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.start-button {
+    background-color: #2196F3;
+    margin-top: 15px;
+}
+
+.start-button:hover {
+    background-color: #1976D2;
+}
+.progress-container {
+    margin: 20px 0;
+}
+
+.download-container {
+    margin: 20px 0;
+}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textify</title>
+    <link rel="stylesheet" href="/static/media_transcriber/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transcribe voice into text instantly! for Free!</h1>
+        <div class="upload-container" id="drop-zone">
+            <div class="upload-content">
+                <p>Drag and drop audio/video file here or</p>
+                <form id="upload-form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" id="file-input" name="media_file" 
+                                accept=".mp3,.wav,.flac,.aac,.ogg,.mp4,.avi,.mov,.wmv,.m4a" hidden>
+                </form>
+                <button id="select-button">Select File</button>
+                <div id="file-details" class="file-details" hidden>
+                    <div class="file-header">
+                        <p class="file-info" id="file-info"></p>
+                        <button id="remove-file" class="remove-button">×</button>
+                    </div>
+                    <div class="file-metadata">
+                        <p id="file-size"></p>
+                        <p id="file-type"></p>
+                    </div>
+                    <button id="start-transcription" class="start-button">Start Transcription</button>
+                </div>
+            </div>
+        </div>
+        <div id="progress" class="progress-container" hidden>
+            <p>Transcribing... Please wait.</p>
+        </div>
+        <div id="download-container" class="download-container" hidden>
+            <p>Transcription completed succefully!!!</p>
+            <button id="download-button">Download</button>
+        </div>
+    </div>
+    <script src="/static/media_transcriber/js/main.js"></script>
+</body>
+</html>

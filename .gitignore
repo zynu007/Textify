@@ -2,3 +2,6 @@ venv
 venv/
 ffmpeg/
 ffmpeg
+ffmpeg.exe
+ffplay.exe
+ffprobe.exe
